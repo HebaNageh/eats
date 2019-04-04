@@ -51,7 +51,6 @@ class StartVC: UIViewController , UICollectionViewDelegate, UICollectionViewData
         cell.adTitleLbl.text = adTitles[indexPath.row]
         cell.adDetailsLbl.text = adDetails[indexPath.row]
         cell.blueLbl.layer.cornerRadius = 1.5
-        self.adsPC.currentPage = indexPath.row
         adsCVCells.append(cell)
         return cell
     }
@@ -62,7 +61,7 @@ class StartVC: UIViewController , UICollectionViewDelegate, UICollectionViewData
 
     private func startTimer() {
         
-        let timer =  Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.scrollAutomatically), userInfo: nil, repeats: true)
+        //let timer =  Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.scrollAutomatically), userInfo: nil, repeats: true)
     }
     
     
@@ -122,6 +121,7 @@ class StartVC: UIViewController , UICollectionViewDelegate, UICollectionViewData
     func scrollViewDidScroll(_ scrollView: UIScrollView)
     {
         //ScaleImage()
+        
     }
     /*
     // MARK: - Navigation
